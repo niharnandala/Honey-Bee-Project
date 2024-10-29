@@ -1,0 +1,77 @@
+
+<div class="bg-dark text-center text-danger border border-warning border-5">
+	<h1 class="display-3">Garudaastra</h1>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3 ">
+			<!-- profile -->
+			<div class="my-3 mx-5 px-5">
+				<img src="/assets/images/profile.png" alt="" style="height: 200px;width: 200px;">
+			</div>
+		</div>
+		<div class="col-md-9 ">
+			<div class="container row pt-3">
+				<div class="col-md-4 ">
+					<!-- display user name and edit it -->
+					<div *ngIf="nameDisplay">
+						<h1 class="display-3 text-center">{{username}}</h1>
+						
+					</div>
+				</div>
+				<div class="col-md-4 " *ngIf="nameDisplay">
+					<button class="btn profile-edit-btn m-3 mt-4 px-4 py-2 btn-primary" (click)="editProfile()">Edit Profile</button>
+				</div>
+				<div class="col-md-4" *ngIf="nameDisplay">
+					<button class="btn profile-edit-btn m-3 mt-4 px-4 py-2 btn-secondary disabled" >Make a post</button>
+				</div>
+			</div>
+			<div class="container row">
+				<div class="col-md-2"></div>
+				<div class="col-md-8">
+					<div *ngIf="edit">
+						<input class="float-right form-control w-50 m-3 mt-4 px-4 py-2" type="text" [(ngModel)]="username" (change)="modifiedName()">
+					</div>
+				</div>
+			</div>
+			
+			<div class="container row text-center">
+				<div class="col-md-4 ">
+					<span class="display-6">{{Posts+" "}}</span>
+					<span class="display-4">Posts</span>
+				</div>
+				<div class="col-md-4">
+					<span class="display-6">{{Followers+" "}}</span>
+					<span class="display-4">Followers</span>
+				</div>
+				<div class="col-md-4">
+					<span class="display-6">{{Following+" "}}</span>
+					<span class="display-4">Following</span>
+				</div>
+			</div>
+
+			<div class="container row">
+				<div class="col-md-12 mt-3 lead">
+					<em>{{quote}}</em>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid  row">
+	<div class="col-md-4 " *ngFor="let img of imgPath">
+		<img [src]="img.path" alt="" width="80%" class="text-center p-3 mx-5 my-2 h-100 " >
+	</div>
+</div>
+
+
+			
+			<!--  -->
+
+				
+				<!--  -->
+
+				<!-- <button class="btn profile-settings-btn" aria-label="profile settings"><i class="fas fa-cog" aria-hidden="true"></i></button> -->
+
+			

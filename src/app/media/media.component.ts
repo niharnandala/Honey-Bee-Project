@@ -1,0 +1,390 @@
+import { Component, OnInit } from '@angular/core';
+import { InterestService } from '../interest.service';
+
+@Component({
+  selector: 'app-media',
+  templateUrl: './media.component.html',
+  styleUrls: ['./media.component.css'],
+})
+export class MediaComponent implements OnInit{
+
+  likes:number=0;
+  dislikes:number=0;
+  private readonly name1 = "Midhun";
+
+  private readonly name2 = "Murali";
+
+  private readonly name3 = "Madhav";
+
+  private readonly name4 = "Navya";
+
+  private readonly name5 = "Adithya";
+
+  private readonly name6 = "Anjali";
+
+  likeFunction() {
+    this.likes++;
+  }
+  dislikeFunction()  {
+    this.dislikes++;
+  }
+  commentInput="";
+  commentIn=false;
+  commentSection() {
+    this.commentIn=true;
+  }
+  commentcompleted(){
+    this.commentIn=false;
+    this.commentSec=true;
+  }
+  commentSec=false;
+//geting data
+  ngOnInit(): void {
+    this.getData();
+  }
+  constructor(private local:InterestService){}
+  topics:any;
+  getData(){
+    this.topics=this.local.interestedStudents
+    //this.topics=this.local.alltopics;
+  }
+  //------------------------------
+
+  contents=[
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name1,
+      postimg:"/assets/images/media/AI1.jpg",
+    },
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name2,
+      postimg:"/assets/images/media/AI2.jpg",
+    },
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic3.jpg",
+      username:this.name3,
+      postimg:"/assets/images/media/AI3.jpg",
+    },
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic4.png",
+      username:this.name4,
+      postimg:"/assets/images/media/AI4.jpg",
+    },
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic5.jpg",
+      username:this.name5,
+      postimg:"/assets/images/media/AI5.jpg",
+    },
+    {
+      course:"Artificial_Intelligence",
+      profileimg:"/assets/images/media/pic6.png",
+      username:this.name6,
+      postimg:"/assets/images/media/AI6.jpg",
+    },
+    //Data Science
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username: this.name6,
+      postimg:"/assets/images/media/DS5.jpg",
+    },
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name6,
+      postimg:"/assets/images/media/DS1.jpg",
+    },
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name6,
+      postimg:"/assets/images/media/DS2.jpg",
+    },
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name6,
+      postimg:"/assets/images/media/DS3.jpg",
+    },
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name6,
+      postimg:"/assets/images/media/DS4.jpg",
+    },
+    {
+      course:"Data_Science",
+      profileimg:"/assets/images/media/pic2.png",
+      username:this.name6,
+      postimg:"/assets/images/media/DS6.jpg",
+    },
+    //Cyber Security
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS1.jpg",
+    },
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS2.jpg",
+    },
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS3.jpg",
+    },
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS4.jpg",
+    },
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS5.jpg",
+    },
+    {
+      course:"Cyber_Security",
+      profileimg:"/assets/images/media/pic.png",
+      username:this.name1,
+      postimg:"/assets/images/media/CS6.jpg",
+    },
+    //Internet of things
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT1.jpg",
+    },
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT2.jpg",
+    },
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT3.jpg",
+    },
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT4.jpg",
+    },
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT5.jpg",
+    },
+    {
+      course:"Internet_of_Things",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/IOT6.jpg",
+    },
+    //HTML
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML1.jpg",
+    },
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML2.jpg",
+    },
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML3.jpg",
+    },
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML4.jpg",
+    },
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML5.jpg",
+    },
+    {
+      course:"HTML",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name3,
+      postimg:"/assets/images/media/HTML6.jpg",
+    },
+    //CSS
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS1.jpg",
+    },
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS2.jpg",
+    },
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS3.jpg",
+    },
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS4.jpg",
+    },
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS5.jpg",
+    },
+    {
+      course:"CSS",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CSS6.jpg",
+    },
+    //Java script
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS1.jpg",
+    },
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS2.jpg",
+    },
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS3.jpg",
+    },
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS4.jpg",
+    },
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS5.jpg",
+    },
+    {
+      course:"Java_Script",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/JS6.jpg",
+    },
+    //Angular
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A1.jpg",
+    },
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A2.jpg",
+    },
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A3.jpg",
+    },
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A4.png",
+    },
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A5.jpg",
+    },
+    {
+      course:"Angular",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/A6.png",
+    },
+    //Chip designing
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP1.jpg",
+    },
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP2.jpg",
+    },
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP3.jpg",
+    },
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP4.jpg",
+    },
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP5.jpg",
+    },
+    {
+      course:"Chip_designing",
+      profileimg:"/assets/images/media/pic1.png",
+      username:this.name2,
+      postimg:"/assets/images/media/CHIP6.png",
+    }
+  ]
+
+
+
+}

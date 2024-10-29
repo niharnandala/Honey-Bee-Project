@@ -1,0 +1,46 @@
+<div class="container row">
+    <div class="row">
+        <div class="col-md-9 p-3" >
+            <div class="bg-secondary bg-opacity-50 border border-dark border-4 " style="height:700px; ">
+                <h1 class="text-center display-4" style="padding-top: 280px;">Your Web cam is opening............</h1>
+            </div>
+        </div>
+        <div class="col-md-3 " style="padding: 60px 0px 0px 10px ;">
+            <form action="">
+                <div class="container row">
+                    <div class="form-group">
+                        <h2>User Name: </h2>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" [(ngModel)]="user.username" #name="ngModel" required/>
+                    </div>
+                    <br><br><br><br>
+                    <div class="form-group">
+                        <h2>Nick Name: </h2>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Nick Name" [(ngModel)]="user.nickname" #name="ngModel" required/>
+                    </div>
+                    <br><br><br><br>
+                    <div class="form-group">
+                        <h2>Phone Number</h2>
+                        <input type="number" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Enter Phone Number"[(ngModel)]="user.phonenumber" pattern="[1-9]{1}[0-9]{9}" required/>
+                      </div>
+                    <br><br><br><br>
+                    <div class="form-group">
+                        <h2>Email</h2>
+                        <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" [(ngModel)]="user.email" #email="ngModel" required/>
+                        <div *ngIf="email.invalid && (email.dirty || email.touched) " class="alert alert-danger">
+                          <div *ngIf="email.errors?.['required']"> Email is Required </div>
+                        </div>
+                      </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-control" name="acceptTerms" [(ngModel)]="user.acceptTerms" class="form-check-input" required #acceptTerms="ngModel" />
+                        <label for="acceptTerms" class="form-check-label"> I have read and agree to the Terms Data</label>
+                    </div>
+                    <br><br><br><br>
+                    <button class="btn btn-success text-light border border-dark border-3 p-3 m-3 fs-2" routerLink="/verify">Accept</button>
+                    
+                    <button class="btn btn-danger text-light border border-dark border-3 p-3 m-3 fs-2" routerLink="/register">Try again</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,315 @@
+<!-- <h1>{{topicstr}}</h1>
+<h1>hi</h1> -->
+
+<div class="container" >
+	<div  class="row">
+        <div class="col-md-6" *ngFor="let content of contents" >
+            <div *ngIf="topicstr.includes('Artificial_Intelligence') && content.course==='Artificial_Intelligence'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+        
+            <div *ngIf="topicstr.includes('Data_Science') && content.course==='Data_Science'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+        
+            <div *ngIf="topicstr.includes('Cyber_Security') && content.course==='Cyber_Security'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+        
+            <div *ngIf="topicstr.includes('Internet_of_Things') && content.course==='Internet_of_Things'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div *ngIf="topicstr.includes('HTML') && content.course==='HTML'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+        
+            <div *ngIf="topicstr.includes('CSS') && content.course==='CSS'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div *ngIf="topicstr.includes('Java_Script') && content.course==='Java_Script'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div *ngIf="topicstr.includes('Angular') && content.course==='Angular'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+
+            <div *ngIf="topicstr.includes('Chip_designing') && content.course==='Chip_designing'">
+                <div class="container row border p-4">
+                    <div class="col-md-12">
+                        <h4>Course: {{content.course}}</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <h4>Project: {{content.project}}</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <img [src]="content.image" alt="" style="width:100%;height:200px">
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="fw-bold">Technologies Used</h6>
+                        <div class="h6">
+                            <ul *ngFor="let tech of content.technologies">
+                                <li>{{tech}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        Rating
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success" style="width: 100%;">Source Code</button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+		
+    </div>
+</div>

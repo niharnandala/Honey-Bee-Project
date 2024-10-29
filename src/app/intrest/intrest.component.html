@@ -1,0 +1,120 @@
+<!-- <body>
+    <div class="container border">      
+            <br>
+            <h2> <b>Intrests : </b></h2> 
+            <table border="0" bgcolor="white" height="60%" width="70%" style="margin-left: 200px;"> <br>
+            <tr align="center">
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Artificisl Intelligence</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Data Science</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Cyber Security</label>
+              </div></td>
+           
+            </tr>
+          <br> 
+            <tr align="center">
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Internet of Things</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">HTML</label>
+              </div></td>
+         
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">CSS</label>
+              </div></td>
+            
+            </tr><br> 
+            <tr align="center">
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Java Script</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">JAVA</label>
+              </div></td>
+              <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">MEAN Stack</label>
+              </div></td>
+            
+            </tr><br> 
+            <tr align="center">
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">C language</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">C++ Language</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">SQL</label>
+              </div></td>
+            
+            </tr> <br>
+            <tr align="center">
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Python Language</label>
+              </div></td>
+            <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Data Visualization</label>
+              </div></td>
+              <td><div class="form-group">
+                <input type="checkbox" id="css">
+                <label for="css">Embeded System</label>
+              </div></td>
+            
+            </tr>
+            <br>
+            </table>
+            <button class="btn btn-primary" style="margin-left: 80%;">
+                <a routerLink="/profile" style="text-decoration: none; color: white;">Save</a>
+            </button> <br><br><br>
+    </div>
+</body> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="display-2 bg-danger bg-opacity-25 border border-danger">Interests:</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4" *ngFor="let inter of interestData;index as i">
+            <div class="form-check m-5">
+              <input type="checkbox" class="form-control " [name]="inter" class="form-check-input p-4"
+                [id]="inter" #inPut (click)="data=data+inter+' '">
+              <label class="form-check-label h3 mt-3 " [for]="inter">
+                {{inter}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 text-center mt-5">
+      <button class="btn btn-success px-5 py-1 " (click)="display()" routerLink="/profile">next</button>
+    </div>
+  </div>
+</div><br>
+<div class="container text-center border border-danger border-5 " style="width: 600px;">
+  <h1 class="display-6">The selected Interests are:-</h1>
+  <p class="lead">{{data+" "}}</p>
+  <!-- <h4 *ngFor="let dat of displayingdata">{{dat+" , "}}</h4> -->
+  
+</div>
+<!-- <h1>{{data}}</h1> -->

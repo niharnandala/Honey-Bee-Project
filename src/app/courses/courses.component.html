@@ -1,0 +1,1267 @@
+<!-- <p>{{topics}}</p> -->
+
+<div class="container-fluid ">
+    <div *ngFor=" let content of contents;index as i">
+        <div *ngIf="topics.includes('Artificial_Intelligence') && content.course==='Artificial_Intelligence'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Data_Science') && content.course==='Data_Science'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Cyber_Security') && content.course==='Cyber_Security'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Internet_of_Things') && content.course==='Internet_of_Things'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('HTML') && content.course==='HTML'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('CSS') && content.course==='CSS'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Java_Script') && content.course==='Java_Script'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Angular') && content.course==='Angular'">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div *ngIf="topics.includes('Chip_designing') && content.course==='Chip_designing' bg-warning">
+            <div *ngIf="content.platform==='Udemy'">
+                <div class="container ">
+                    <div class="row bg-dark m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8">
+                            <img [src]="content.coursebanner" style="width: 100%;height:60px" [alt]="content.platform" class="rounded-5">
+                        </div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="content.platform==='Telsuko'">
+                <div class="container ">
+                    <div class="row bg-danger m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coursera'">
+                <div class="container ">
+                    <div class="row bg-warning m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Coincent'">
+                <div class="container ">
+                    <div class="row bg-primary m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Arrow'">
+                <div class="container ">
+                    <div class="row bg-success m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div *ngIf="content.platform==='Byjus'">
+                <div class="container ">
+                    <div class="row bg-info m-2 bg-opacity-25">
+                        <div class="col-md-4  text-center ">
+                            <h1 class="display-5">{{content.platform}}</h1>
+                        </div>
+                        <div class="col-md-8"><img [src]="content.coursebanner" style="width: 100%;height:60px"
+                                [alt]="content.platform" class="rounded-5"></div>
+                        <div class="col-md-8"><img [src]="content.platformbanner" style="width: 100%;height:240px"
+                                [alt]="content.platform" class="rounded-circle"></div>
+                        <div class="col-md-4">
+                            <div style="height: 200px;">
+                                <p class="lead">{{content.description}}</p>
+                            </div>
+                            <div class="text-center display-6">
+                                {{content.cost | currency:'INR' :'symbol'}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>

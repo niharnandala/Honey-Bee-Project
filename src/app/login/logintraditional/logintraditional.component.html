@@ -1,0 +1,29 @@
+
+<div class="container " style="width: 800px;">
+    <div class="text-center">
+      <h1 class="display-1 bg-dark text-danger border border-danger border-1">Garudaastra</h1>
+      <!-- <img class="bg-dark " alt="" style="width: 100%;height:100%" src="assets/images/title.PNG"> -->
+    </div><br>
+    <form name="loginform" class="registartion-form" ngNativeValidate #loginform="ngForm"
+      (ngSubmit)="(loginform.form.valid)">
+  <br>
+      <div class="form-group">
+        <h2>User Id: </h2>
+        <input type="text" name="name" id="name" class="form-control" placeholder="UserId" [(ngModel)]="login.userId"
+          #name="ngModel" required />
+      </div><br><br>
+  
+      <div class="form-group">
+        <h2>Password: </h2>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" [(ngModel)]="login.password" #password="ngModel" required />
+      </div><br><br>
+      <div class="form-group" style="text-align: center;">
+        <button type="submit" class="btn btn-primary " value="Register" (click)="logIn(loginform)" style="width: 100%;" routerLink="/profile">Login</button>
+      </div><br>
+      <h1>{{loginData | json}}</h1>
+    </form><br>
+    <hr><br><br>
+    <div>
+      <h4 class="text-center fw-bold">Not have an account? <a routerLink="/register">Sign Up</a> </h4>
+    </div>
+  </div>

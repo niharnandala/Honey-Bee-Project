@@ -1,0 +1,323 @@
+<!-- <h1>{{topics}}</h1> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="container col-md-12" style="margin-left: 10px; margin-right: 10px;width: 100%;">
+	<div *ngFor="let content of contents">
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Artificial_Intelligence') && content.course==='Artificial_Intelligence'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Data_Science') && content.course==='Data_Science'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Cyber_Security') && content.course==='Cyber_Security'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Internet_of_Things') && content.course==='Internet_of_Things'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('HTML') && content.course==='HTML'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('CSS') && content.course==='CSS'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Java_Script') && content.course==='Java_Script'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Angular') && content.course==='Angular'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div>
+		<div class="w-1" style="width:40%" *ngIf="topics.includes('Chip_designing') && content.course==='Chip_designing'">
+			<div class="card ">
+				<div class="card-header">
+					<img [src]="content.profileimg" class="card-img-bottom" style="width: 50px;height: 50px;" alt="...">
+					<a routerLink="profile" class="text-decoration-none name display-6">{{content.username}}</a>
+				</div>
+				<div class="card-body">
+					<div>
+						<img [src]="content.postimg" class="card-img-bottom" style="width: 300px;height: 250px;"
+							alt="...">
+
+						<div>
+							<button class="fa fa-thumbs-up" (click)="likeFunction()"></button>
+							<button class="fa fa-thumbs-down" (click)="dislikeFunction()"></button>
+							<button class="fa fa-comments-o" (click)="commentSection()"></button>
+							<button class="fa fa-share-square-o"></button>
+							<button class="fa fa-bookmark-o" style="margin-left: 150px;"></button>
+						</div>
+					</div>
+
+					<div class="likes">Liked by <span>{{likes}}</span> people </div>
+					<div class="likes">DisLiked by <span>{{dislikes}}</span> people </div><br>
+					<div *ngIf="commentIn">
+						<input type="text" [(ngModel)]="commentInput" (change)="commentcompleted()"
+							class="form-control">
+					</div>
+					<div *ngIf="commentSec">
+						<p class="lead">{{commentInput}}</p>
+					</div>
+				</div>
+				<div class="card-footer text-body-secondary">
+					2 days ago
+				</div>
+			</div>
+		</div><br>
+	</div>
+</div>

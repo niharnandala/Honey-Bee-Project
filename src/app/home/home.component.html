@@ -1,0 +1,53 @@
+
+<div id="carouselExampleAutoplaying" class="carousel slide border border-danger border-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/images/carosel1.png" class="d-block " style="width:100%;height:400px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/carosel2.jpg" class="d-block " style="width:100%;height:400px" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/images/carosel3.jpg" class="d-block " style="width:100%;height:400px" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden ">Previous</span>
+  </button>
+  <button class="carousel-control-next " type="button" data-bs-target="#carouselExampleAutoplaying"
+    data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden ">Next</span>
+  </button>
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-4 " *ngFor="let content of contents" style="height: 600px;">
+      <div class="card m-5 " [class]="content.class">
+        <img [src]="content.image" class="card-img-top p-3 " alt="Flexbox Feature" style="width:100%;height: 300px;">
+        <div class="card-body">
+          <h2 class="card-text text-danger fw-bold">{{content.heading}}</h2>
+          <p class="text-dark lead " style="width: 400px;">{{content.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <img src="/assets/images/post5.jpg" alt="Flexbox Feature" style="width:400px;height: 300px;">
+          <h2>Networking and Connections: </h2>
+          <p>Social media platforms are designed to connect individuals and facilitate networking.
+             Users can search for and connect with other users, build a network of connections, and expand their social circles. </p> -->
+
+<!-- <img src="/assets/images/post6.jpg" alt="Flexbox Feature" style="width:400px;height: 300px;">
+          <h2>Messaging and Chat: </h2>
+          <p>These features enable one-on-one or group conversations, file sharing, and the exchange of multimedia content.
+             Messaging features enhance the social aspect of the platforms and promote direct communication between users.
+
+          </p> -->

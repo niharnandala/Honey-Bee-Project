@@ -1,0 +1,173 @@
+<div class="text-center display-6 bg-warning bg-opacity-75 mb-4 border border-dark border-5 p-3 text-dark">
+  <span *ngFor="let topic of topics">{{topic+" | "}}</span>
+</div>
+<section>
+  <div class="container ">
+    <div *ngFor=" let content of contents;index as i">
+      <div *ngIf="topics.includes('Artificial_Intelligence') && content.course==='Artificial_Intelligence'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-danger bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="topics.includes('Data_Science') && content.course==='Data_Science'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-info bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('Cyber_Security') && content.course==='Cyber_Security'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-secondary bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('Internet_of_Things') && content.course==='Internet_of_Things'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-success bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('HTML') && content.course==='HTML'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-warning bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('CSS') && content.course==='CSS'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-primary bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('Java_Script') && content.course==='Java_Script'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-dark bg-opacity-50">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('Angular') && content.course==='Angular'">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-primary bg-opacity-75">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+      <div *ngIf="topics.includes('Chip_designing') && content.course==='Chip_designing' bg-warning">
+        <!-- topics.includes(content.course) -->
+        <div class="bg-warning bg-opacity-25">
+          <h1 class="fw-bold h2 mb-3">{{"* "+content.question}}</h1>
+        </div>
+        <div class="container row ">
+          <div class="col-md-1"></div>
+          <div class="col-md-2">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-success px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">YES</label>
+          </div>
+          <div class="col-md-2 mb-4">
+            <input type="radio" class="form-control" [name]="i+1" class="form-check-input bg-danger px-4 py-3 mr-3">
+            <label for="opt1" class="display-6 ml-4">No</label>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+
+</section>

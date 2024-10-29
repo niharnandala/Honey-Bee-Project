@@ -1,0 +1,117 @@
+<!-- <div class="page-wrapper">
+  <div class="nav-wrapper">
+   <div class="grad-bar"></div>
+   <nav class="navbar" style="background-color:aqua;">
+     <h1 style="color:orange;text-shadow: 6px 6px 6px black;">TECH-BUZZ</h1>
+     <div class="menu-toggle" id="mobile-menu">
+       <span class="bar"></span>
+       <span class="bar"></span>
+       <span class="bar"></span>
+     </div>
+     <ul class="nav no-search">
+      <li class="nav-item" style="margin-right:20px ; margin-right:30px; "><a routerLink="/home" style="text-decoration: none;color: black;" class="a" > <b>Home</b></a></li>
+      <li class="nav-item" style="margin-right:20px"><a routerLink="/login" style="text-decoration: none;color: black;" > <b>Login</b></a></li>
+      <li class="nav-item" style="margin-right:20px"><a routerLink="/register" style="text-decoration: none;color: black;"> <b>Register</b></a></li> 
+      <li class="nav-item" ><a routerLink="/about" style="text-decoration: none;color: black;"> <b>About</b></a></li>  
+     </ul>
+   </nav>
+<router-outlet></router-outlet> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-md-2 navigationsidebar">
+      <br><br><br>
+      <div class="nav flex-column nav-pills bg-info bg-opacity-25 border border-info" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+        <a class="nav-link active  m-5 text-center bg-info text-danger fs-1 display-5  fw-bold bg-opacity-50" routerLink="home"><i class="fa fa-home" style="font-size:48px;color:red"></i></a><br><br>
+        <a class="nav-link  m-5 text-center bg-info text-danger fs-1 display-5  fw-bold bg-opacity-50" routerLink="login"><i class="fa fa-user" style="font-size:48px;color:red"></i></a><br><br>
+        <a class="nav-link  m-5 text-center bg-info text-danger fs-1 display-5  fw-bold bg-opacity-50" routerLink="register"><i class="fa fa-book" style="font-size:48px;color:red"></i></a><br><br>
+        <a class="nav-link  m-5 text-center bg-info text-danger fs-1 display-5  fw-bold bg-opacity-50" routerLink="about"><i class="fa fa-address-card" style="font-size:48px;color:red"></i></a>
+      </div>
+    </div>
+    <div class="col-md-10 content">
+      <br><br><br><br>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+</div>
+<div class="navigationbar">
+	<div class="page-wrapper">
+		<div class="nav-wrapper">
+		 <div class="grad-bar"></div>
+		 <nav class="navbar" style="background-color: black;" >
+      <br>
+			<h1 style="color:orange;text-shadow: 6px 6px 6px red;">Garudaastra</h1> 
+		   
+		   <ul class="nav no-search">
+			<li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" style="margin-right:20px ; margin-right:30px; "><a routerLink="/profile" style="text-decoration: none;" class="a" class="link-warning" >Profile</a></li>
+      <li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" style="margin-right:20px ; margin-right:30px; "><a routerLink="/media" style="text-decoration: none;" class="a" class="link-warning" >Media</a></li>
+			<li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" style="margin-right:20px"><a routerLink="/chat" style="text-decoration: none;" class="link-warning">Chat</a></li>
+			<li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" style="margin-right:20px"><a routerLink="/courses" style="text-decoration: none;" class="link-warning" >Courses</a></li>
+			<li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" style="margin-right:20px"><a routerLink="/projects" style="text-decoration: none;" class="link-warning">projects</a></li> 
+			<li class="nav-item bg-light bg-opacity-25 px-5 py-2 mx-1  fw-bold h6 rounded-circle" ><a routerLink="/quiz" style="text-decoration: none;" class="link-warning">quiz</a></li>  
+		   </ul>
+       
+       
+        
+        <button class="navbar-toggler bg-secondary mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Settings</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body bg-secondary bg-opacity-50">
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2 border border-dark border-3" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-secondary border border-light" type="submit">Search</button>
+            </form><br>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 ">
+              <li class="nav-item">
+                <a class="nav-link active text-light" aria-current="page" routerLink="home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="register">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="intrest">Choose Interest</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="profile">Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="media">Media</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="chat">Chat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="courses">Courses</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="projects">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" routerLink="quiz">Quiz</a>
+              </li>
+              
+              
+            </ul>
+            <button class="btn btn-danger" routerLink="login">Log out</button>
+          </div>
+        </div>
+      
+      
+      
+		 </nav>
+	  
+  </div>
+</div>
+

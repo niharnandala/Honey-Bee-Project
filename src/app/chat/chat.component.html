@@ -1,0 +1,82 @@
+<h1>Username is :-{{localService.username}}</h1>
+<div class="container border border-danger py-4">
+    <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white">
+      <div class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+        <input class="fs-5 fw-semibold" [(ngModel)]="localService.username"/>
+      </div>
+      <div class="list-group list-group-flush border-bottom scrollarea">
+        <div class="list-group-item list-group-item-action py-3 lh-tight"
+             *ngFor="let msg of messages">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1 fs-3">{{msg.username}}</strong>
+          </div>
+          <div class="col-10 mb-1 small lead">{{msg.message}}</div>
+        </div>
+        <div>
+          <div *ngIf="message == 'AI'">
+            <h4>Artificial intelligence</h4>
+            <p>Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems. Specific applications of AI include expert systems, natural language processing, speech recognition and machine vision.</p>
+          </div>
+          <div *ngIf="message == 'ai'">
+            <h4>Artificial intelligence</h4>
+            <p>Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems. Specific applications of AI include expert systems, natural language processing, speech recognition and machine vision.</p>
+          </div>
+          <div *ngIf="message == 'ds'">
+            <h4>Data Science</h4>
+            <p>Data science is a multidisciplinary field that uses algorithms, processes, and procedures to analyze large amounts of data. It combines principles and practices from mathematics, statistics, artificial intelligence, and computer engineering. Data science is used to uncover hidden patterns, generate insights, and direct decision-making.</p>
+          </div>
+          <div *ngIf="message == 'DS'">
+            <h4>Data Science</h4>
+            <p>Data science is a multidisciplinary field that uses algorithms, processes, and procedures to analyze large amounts of data. It combines principles and practices from mathematics, statistics, artificial intelligence, and computer engineering. Data science is used to uncover hidden patterns, generate insights, and direct decision-making.</p>
+          </div>
+          <div *ngIf="message == 'html'">
+            <h4>Hyper Text Markup Language</h4>
+            <p>HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML 1.0, but the first standard version was HTML 2.0, published in 1995.</p>
+          </div>
+          <div *ngIf="message == 'HTML'">
+            <h4>Hyper Text Markup Language</h4>
+            <p>HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML 1.0, but the first standard version was HTML 2.0, published in 1995.</p>
+          </div>
+          <div *ngIf="message == 'CS'">
+            <h4>Cyber Security</h4>
+            <p>Cyber_Security Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ratione sunt aut quisquam incidunt nisi, aspernatur quaerat a officiis? Amet quae quisquam dolor distinctio doloremque a fuga itaque totam incidunt?
+            Aut laborum sequi explicabo. Officia ex repellat commodi laudantium asperiores sequi, perferendis debitis modi? Dolor incidunt, facilis libero quos natus quas iure, delectus perferendis eos quasi quaerat quae. Eum, rerum?</p>
+          </div><div *ngIf="message == 'cs'">
+            <h4>Cyber Security</h4>
+            <p>Cyber_Security Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem vero maiores, officia id cum facilis placeat hic quas ea, facere numquam dignissimos laborum iusto eligendi porro culpa esse ullam at.
+            Hic saepe asperiores magnam corrupti maxime nostrum debitis totam ipsum vitae molestias assumenda, dolorum temporibus perspiciatis reiciendis eveniet a doloribus optio aperiam, facere ratione magni. Minus quaerat numquam architecto error.</p>
+          </div><div *ngIf="message == 'iot'">
+            <h4>Internet of Things</h4>
+            <p>Internet_of_Things Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eveniet quod expedita laborum quibusdam architecto ducimus maiores unde soluta officia corrupti, quas dignissimos quaerat veritatis adipisci non hic? Harum, architecto?
+            Optio, qui suscipit provident quia molestias sapiente dolorem dolore enim ab. Tenetur veniam ex odio autem modi quaerat ea et rem, tempore adipisci officiis at voluptas ducimus, ab perferendis. Labore./p>
+          </div><div *ngIf="message == 'IOT'">
+            <h4>Internet of Things</h4>
+            <p>Internet_of_Things Lorem ipsum dolor, sit amet consectetur adipisicing elit. At molestias incidunt, deserunt assumenda obcaecati sint eum itaque, quam magnam libero unde nemo provident facere excepturi totam delectus! Quibusdam, odit repudiandae.
+            Nostrum quidem perspiciatis eius assumenda fugit eos natus error cupiditate quas nam necessitatibus, dignissimos veniam autem reprehenderit nihil qui dolorum, aspernatur adipisci harum animi a optio quasi repudiandae explicabo. Facilis?</p>
+          </div><div *ngIf="message == 'Angular'">
+            <h4>Angular</h4>
+            <p>Angular Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, asperiores. Quisquam reiciendis repellendus placeat ipsum maiores illum modi impedit voluptatem tempora, temporibus praesentium eveniet nulla iusto fuga, iste, voluptatum tempore!
+            Error accusamus repellat officia, facilis optio ipsam vero sequi, vitae, culpa itaque magni voluptatum a consectetur explicabo maiores harum atque temporibus eos. Similique, non? Debitis voluptatibus esse mollitia veniam quo.</p>
+          </div><div *ngIf="message == 'angular'">
+            <h4>Angular</h4>
+            <p>Angular Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quam error laboriosam fugiat ducimus enim repellat amet dolores, cupiditate dolore, quidem nemo sapiente deserunt maiores quis, voluptates ullam laborum. Velit?
+            Unde maiores quaerat porro laudantium perspiciatis explicabo soluta nisi. Iusto aspernatur autem consequuntur aut facilis quam. Animi aliquam, exercitationem eaque eius sequi voluptas praesentium quae placeat maxime optio minus nulla?</p>
+          </div><div *ngIf="message == 'CD'">
+            <h4>Chip designing</h4>
+            <p>Chip_designing Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, placeat. Aperiam pariatur nam, quam eos cumque sunt reprehenderit aspernatur obcaecati enim accusantium ipsum modi distinctio laborum repudiandae cupiditate in aliquid!
+              Nobis delectus sit quae quaerat incidunt exercitationem debitis maiores maxime atque optio labore, cum id nemo. Nobis, ipsa laborum sapiente ipsum sequi consequuntur eum placeat vero nulla odio? Accusamus, voluptas?</p>
+          </div><div *ngIf="message == 'cd'">
+            <h4>Chip designing</h4>
+            <p>Chip_designing Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, placeat. Aperiam pariatur nam, quam eos cumque sunt reprehenderit aspernatur obcaecati enim accusantium ipsum modi distinctio laborum repudiandae cupiditate in aliquid!
+            Nobis delectus sit quae quaerat incidunt exercitationem debitis maiores maxime atque optio labore, cum id nemo. Nobis, ipsa laborum sapiente ipsum sequi consequuntur eum placeat vero nulla odio? Accusamus, voluptas?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <form (submit)="submit()"> -->
+      <input class="form-control" placeholder="Write a message" 
+      [(ngModel)]="message"
+      />
+    <!-- </form> -->
+  </div>
+  <!-- [value]="message" (change)="message=$event.target.value" -->

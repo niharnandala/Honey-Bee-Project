@@ -1,0 +1,120 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="page">
+            <div class="header">
+              <img [src]="logoUrl" alt="">
+              <p>Sign up to see photos and videos from your friends.</p>
+              <button><i class="fab fa-facebook-square"></i> Log in with Google</button>
+              <div>
+                <hr>
+                <p>OR</p>
+                <hr>
+              </div>
+            </div>
+            <div class="container">
+              <form action="">
+                <input type="text" placeholder="Mobile Number or Email">
+                <input type="text" placeholder="Full Name">
+                <input type="text" placeholder="Username">
+                <input type="password" placeholder="Password">
+                <button><a routerLink="/verify" style="text-decoration: none; color: white;">Sign up</a></button>
+              </form>
+              
+              <ul>
+                <li>By signing up, you agree to our</li>
+                <li><a href="">Terms</a></li>
+                <li><a href="">Data Policy</a></li>
+                <li>and</li>
+                <li><a href="">Cookies Policy</a> .</li>
+             </ul>
+            </div>
+        </div>
+        <div class="option">
+           <p>Have an account? <a routerLink="/login">Log in</a></p>
+        </div>
+      
+        
+        
+       <router-outlet></router-outlet>  
+        </main>
+      
+</body>
+</html> -->
+
+
+<div class="container-fluid ">
+  <div class="container  " style="width: 600px">
+    <h1 class="text-center display-6 m-4 ">Sign up for creating an account</h1>
+    <hr>
+    <form name="registration" class="registartion-form" ngNativeValidate #registration="ngForm" (ngSubmit)="(registration.form.valid)">
+      <div class="container row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <h5>First Name: </h5>
+            <input type="text" name="name" id="name" class="form-control" placeholder="First Name" [(ngModel)]="user.firstname" #name="ngModel" required/>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <h5>Last Name: </h5>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Last Name" [(ngModel)]="user.lastname" #name="ngModel" required/>
+          </div>
+        </div>
+      </div><br>
+      <div class="form-group">
+        <h5>User Id </h5>
+        <input type="text" name="name" id="name" class="form-control" placeholder="User Id" [(ngModel)]="user.userid" #name="ngModel" required/>
+      </div><br>
+      <div *ngIf="name.invalid && (name.dirty || name.touched) " class="alert alert-danger">
+        <div *ngIf="name.errors?.['required']"> Username is Required</div>
+      </div>
+      <div class="form-group">
+        <h5>Email</h5>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Enter Email" [(ngModel)]="user.email" #email="ngModel" required/>
+        <div *ngIf="email.invalid && (email.dirty || email.touched) " class="alert alert-danger">
+          <div *ngIf="email.errors?.['required']"> Email is Required </div>
+        </div>
+      </div><br>
+      <div class="form-group">
+        <h5>Password</h5>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" [(ngModel)]="user.password" #password="ngModel" required minlength="4" maxlength="6"/>
+        <div *ngIf="password.invalid && (password.dirty || password.touched) " class="alert alert-danger">
+          <div *ngIf="password.errors?.['required']"> Password is Required </div>
+        </div>
+      </div><br>
+      <div class="form-group">
+        <h5>Phone Number</h5>
+        <input type="number" name="phoneNumber" id="phoneNumber" class="form-control" placeholder="Enter Phone Number"[(ngModel)]="user.phonenumber" pattern="[1-9]{1}[0-9]{9}" required/>
+      </div><br>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-control" name="acceptTerms" [(ngModel)]="user.acceptTerms" class="form-check-input" required #acceptTerms="ngModel" />
+        <label for="acceptTerms" class="form-check-label"> I have read and agree to the Terms Data</label>
+      </div><br>
+      <div class="form-group" style="text-align: center;">
+        <button type="submit" class="btn btn-primary " value="Register" (click)="signup(registration)" style="width: 100%;" routerLink="/verify"> Sign Up</button><br><br>
+        <button class="btn btn-success" (click)="onShow()" style="width: 100%;">To Show</button>
+      </div>
+    </form><br>
+    <h1>{{signUpData | json}}</h1>
+    <hr>
+    <p class="text-center lead m-4">Login with</p>
+    <div class="text-center">
+      <button class="m-3 border border-danger"><img src="assets/images/googleicon.jpg" alt="" style="width: 100px; height:100px;mix-blend-mode: darken;"></button>
+    </div>
+    <hr>
+    <div>
+      <h4 class="text-center fw-bold">Have an account? <a routerLink="/login">Log In</a> </h4>
+    </div>
+  </div>
+
+  
+    
+  
+</div>
